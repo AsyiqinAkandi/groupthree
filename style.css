@@ -1,0 +1,197 @@
+/*the body*/
+#container {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #B6ABBB;
+	display: grid;
+	/*grid-column-gap: 10px;*/
+	grid-template-columns: repeat(auto-fit, 100%);
+	grid-template-areas: 
+	"header header header"
+	"one two three"
+	"headerer headerer headerer"
+	"four four four";
+	box-sizing: border-box;
+	/*margin: auto;*/
+	background: url(BG.jpeg);
+	background-size: 100%;
+}
+
+/*headers*/
+h1 {
+	text-align: center;
+}
+
+/*Card templates*/
+.choices {
+	display: flex;
+	width: 70%;
+	justify-content: space-around;
+	margin: auto;
+}
+
+.card {
+	width: 280px;
+	height: 360px;
+	padding: 2rem 1rem;
+	position: relative;
+	display: flex;
+	align-items: flex-end;
+	box-shadow: 0 10px 10px grey;
+	transition: 0.5s ease-in-out;
+}
+
+.card:hover {
+	transform: translateY(20px);
+}
+
+.card:before {
+	content: ""; /*just for spacing*/
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(to bottom, #ffe9ef, #624a59);
+	z-index: 2;
+	transform: 0.5s all;
+	opacity: 0;
+}
+
+.card:hover:before {
+	opacity: 1;
+}
+
+.card img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.card .text {
+	position: relative;
+	z-index: 3;
+	color: white;
+	opacity: 0;
+	transform: translateY(30px);
+	transition: 0.5s all;
+}
+
+.card:hover .text {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+.card .text h2 {
+	margin: 0;
+}
+
+.card .text p {
+	letter-spacing: 1px;
+	font-size: 15px;
+	margin-top: 8px;
+	margin-bottom: 20px;
+}
+
+.card .text .button {
+	text-decoration: none;
+	padding: 0.5rem 1rem;
+	background-color: white;
+	font-size: 14px;
+	font-weight: bold;
+	cursor: pointer;
+	transition: 0.4s ease-in-out;
+}
+
+.card .text .button:hover {
+	box-shadow: 0 10px 10px grey;
+}
+
+/*For custom card*/
+#custom {
+	width:400px;
+	height:450px;
+	/*overflow:hidden;*/
+	position:relative;
+	margin: auto;
+	/*box-shadow: 0 10px 10px grey;*/
+}
+
+#custom img { 
+	position:absolute; 
+	animation:fling-minislide 20s infinite;
+	opacity:0; 
+	width: 400px; 
+	height: 400px;
+	margin: auto;
+	box-shadow: 0 4px 8px 0 grey, 0 6px 20px 0 grey;
+}
+
+#custom #btn {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	background-color: grey;
+	color: white;
+	font-size: 16px;
+	padding: 12px 24px;
+	border: none;
+	cursor: pointer;
+	border-radius: 5px;
+	text-align: center;
+	text-decoration: none;
+	box-shadow: 0 10px 10px grey;
+}
+
+#custom #btn:hover {
+	background-color: black;
+}
+
+@keyframes fling-minislide {
+	25% {opacity:1;} 
+	40% {opacity:0;}
+}
+
+#custom img:nth-child(10){animation-delay:0s;}
+#custom img:nth-child(9){animation-delay:5s;}
+#custom img:nth-child(8){animation-delay:10s;}
+#custom img:nth-child(7){animation-delay:15s;}
+#custom img:nth-child(6){animation-delay:20s;}
+#custom img:nth-child(5){animation-delay:25s;}
+#custom img:nth-child(4){animation-delay:30s;}
+#custom img:nth-child(3){animation-delay:35s;}
+#custom img:nth-child(2){animation-delay:40s;}
+#custom img:nth-child(1){animation-delay:45s;}
+
+/*footer*/
+footer {
+	position: fixed;
+	bottom: 0;
+	background-color: beige;
+	width: 100%;
+	text-align: center;
+}
+
+/*mobile view*/
+@media screen and (max-width: 860px){
+			#container {
+				/*grid-template-rows: repeat(auto-fit, 100%);*/
+				grid-template-areas: 
+				"header"
+				"one"
+				"two"
+				"three"
+				"headerer"
+				"four";
+				/*box-sizing: border-box;*/
+			}
+		}

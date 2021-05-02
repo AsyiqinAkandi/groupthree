@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Insert your text</title>
+
+	<style type="text/css">
+
+		* {
+
+			font-family: arial;
+		}
+
+		/*just to see where things go*/
+		/*div {
+			border: 1px solid;
+		}*/
+
+		label {
+		    font-weight: bolder;
+		}
+
+		input {
+			left: 10%;
+		}
+
+		#done {
+			width: 500px;
+			display: grid;
+			grid-template-columns: 160px 300px 1fr;
+			grid-auto-rows:70px;
+			grid-row-gap: 1em;
+			align-items: center;
+			padding-left: 150px;
+			padding-right: 100px;
+		}
+		
+		#display {
+			width: 450px;
+			height: 550px;
+			border: 1px solid;
+			position: fixed;
+			right: 50px;
+			top: 15px;
+		}
+
+		.button {
+			background-color: gray;
+			border: none;
+			color: white;
+			padding: 20px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			margin: 4px 2px;
+			cursor: pointer;
+			width: 100px;
+		}
+
+		#insert {
+			width: 130px;
+		}
+
+	</style>
+
+	<script type="text/javascript">
+
+		function insert() {
+			// for name
+			var name = document.getElementById("name");
+			var nama = document.getElementById("nama");
+			nama.innerHTML = name.value;
+
+			// for to
+			var to = document.getElementById("to");
+			var kepada = document.getElementById("kepada");
+			kepada.innerHTML = to.value;
+
+			// for from
+			var from = document.getElementById("from");
+			var dari = document.getElementById("dari");
+			dari.innerHTML = from.value;
+
+			// for time <- balum dapat
+			var date = document.getElementById("date");
+			var masa = document.getElementById("masa");
+			masa.innerHTML = date.value;
+			
+			// for location
+			var place = document.getElementById("place");
+			var tempat = document.getElementById("tempat");
+			tempat.innerHTML = place.value;
+
+			// for date
+
+			// for colour picker
+		}
+
+		function selecting() {
+			// for greeting
+			var greetMe = document.getElementById("greeting").value;
+			document.getElementById("greet").innerHTML = greetMe;
+		}
+
+		function changeTemp() {
+
+		    var image = document.getElementById('display');
+		    if (image.src.match("img/more.jpg")) {
+		        image.src = "img/less.jpg";
+		    }
+		    else {
+		        image.src = "img/more.jpg";
+		    }
+		}
+
+	</script>
+
+</head>
+<body>
+
+<div style="grid-area: top" id="done">
+	<label for="name">Name: </label>
+	<input type="text" name="name" id="name"><br>
+
+	<label>Greeting: </label>
+	<select id="greeting" onchange="selecting()">
+		<option value="Please select a greeting">Please select a greeting</option>
+		<option value="Assalamualaikum">Assalamualaikum</option>
+		<option value="Good morning">Good morning</option>
+		<option value="Good Afternoon">Good Afternoon</option>
+		<option value="Good evening">Good evening</option>
+		<option value="Good day!">Good day!</option>
+	</select><br>
+
+	<label for="to">To: </label>
+	<input type="text" name="to" id="to"><br>
+
+	<label for="from">From: </label>
+	<input type="text" name="from" id="from"><br>
+
+	<label for="time">Time: </label>
+	<input type="time" name="time" id="time"><br>
+
+	<label for="place">Location: </label>
+	<input id="place" contenteditable="true"><br>
+
+	<label for="date">Date: </label>
+	<input type="date" name="date" id="date"><br>
+
+	<label for="color">Background colour: </label>
+	<input type="color" name="color" id="color"><br>
+
+	<label for="temp">Change Template: </label>
+	<input type="button" name="temp" id="temp" value="Change!" onclick="changeTemp()"><br>
+
+	<button id="insert" class="button" onclick="insert()">Insert</button>
+	<a href="index.html" class="button">Back</a>
+
+</div>
+
+<div style="grid-area: bottom" id="dtwo">
+
+	<div id="display">
+		<div id="nama"></div>
+		<div id="greet"></div>
+		<div id="kepada"></div>
+		<div id="dari"></div>
+		<div id="masa"></div>
+		<div id="tempat"></div>
+		<div id="hb"></div>
+		<div id="warna"></div>
+	</div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		* {
+			box-sizing: border-box; 
+		}
+
+		body {
+			/*display: flex;*/
+			align-items: center;
+			justify-content: center;
+		}
+
+		#bg {
+			background: url(BG.jpeg);
+			background-size: 100%;
+			background-color: #fdfdfd;
+			overflow: hidden;
+			padding: 100px 0;
+		}
+
+		#container {
+			width: 50%;
+			height: 350px;
+			float: right;
+			background-color: white;
+			padding: 100px;
+		}
+
+		#container h1{
+			margin-bottom: 30px;
+			font-size: 30px;
+			font-weight: 900;
+		}
+
+		p {
+			font-size: 13px;
+			color: #262254;
+			line-height: 30px;
+			text-align: justify;
+			margin-bottom: 40px;
+		}
+
+		@media screen and(max-width: 1200px) {
+			#container {
+				padding:80px;
+			}
+
+			@media screen and(max-width: 600px) {
+				#bg {
+					
+					padding: 0;
+
+				}
+				#container {
+					width: 100%;
+					
+				}
+			}
+		} 
+	</style>
+</head>
+<body>
+<div id="bg">
+	<div id="container">
+		<h1>About us</h1>
+		<div id="text">
+			<p>D'NEXT is a top website for creating online invitation card that is user friendly and has extraordinary feature. It was first started back in early 20's that currently upgrading their features by having a customization.</p>
+		</div>
+	</div>
+</div>
+</body>
+</html>
