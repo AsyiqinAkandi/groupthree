@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 
-header/*, footer*/ {
+header{
 	width: 100%;
 	height: 3.1vh;
 	background-color: #624A59;
@@ -13,11 +13,6 @@ header/*, footer*/ {
 	
 
 }
-
-/*footer {
-	position: fixed;
-	bottom: 0;
-}*/
 
 header {
 	position: absolute;
@@ -67,33 +62,24 @@ img {
 
  select {
  	position: absolute;
- 	left: 330px;
-	top: 325px;
+ 	left: 310px;
+	top: 357px;
 	right: 450px;
  }
 
  button {
- 	/*display: flex;
- 	justify-content: center;*/
  	margin: 0 auto;
  	vertical-align: middle;
+ 	 background-color: #d291bc;
+  	color: black;
+  	border-radius: 12px;
+  	border: none;
+  	text-align: center;
+  	display: inline-block;
+    cursor: pointer;
  }
 
- a {
-   text-decoration: none;
-   display: inline-block;
-   padding: 20px;
-   font-size: 35px;
-   width: 15px;
-   text-align: center;
-}
-
 #land {
-/*	width: 600px;
-	height: 400px;
-	display: none;
-	border : 2px dashed black;
-	display: block;*/
 	margin-top: 50px; margin-left: 80px; margin-right: auto;
 
 }
@@ -140,7 +126,7 @@ img {
     outline-style: none;
     position: absolute;
      left: 395px;
-	top: 390px;
+	top: 420px;
 	right: 450px;
 }
 
@@ -149,15 +135,9 @@ img {
     height: 30px;
     position: absolute;
      left: 345px;
-	top: 390px;
+	top: 420px;
 }
 
-#details {
-	position: absolute;
-	 left: 215px;
-	top: 530px;
-	right: 450px;
-}
 
 #h3lagi {
 	position: absolute;
@@ -166,13 +146,28 @@ img {
 	right: 450px;
 }
 
-#occasion, #venue, #detail, #date, #time, #greetings{
+#temp {
+  position: absolute;
+  left:  305px;
+  top: 390px;
+  right: 450px;
+}
+
+
+#occasion, #venue, #details, #date, #time,#sender, #recipient{
 	margin: 0 auto;
 	display: block;
 }
 
+#greetings {
+  position: absolute;
+  left: 65px;
+  top:  289px;
+  right: 450px;
+}
+
 		#greetings1{
-            /z-index: 1;/
+            /z-index: 0;/
             position: absolute;
             top: 250px;
             right:470px;
@@ -224,6 +219,24 @@ img {
             text-align: center
         }
 
+         #recipient1{
+            /z-index: 1;/
+            position: absolute;
+            top: 200px;
+            right:100px;
+            color: black;
+            text-align: center
+        }
+
+         #sender1{
+            /z-index: 1;/
+            position: absolute;
+            top: 200px;
+            right:100px;
+            color: black;
+            text-align: center
+        }
+
 
 .rows{
 	display:flex;
@@ -240,34 +253,34 @@ img {
 
 .stick{
 	margin-top: -10px; margin-left: auto; margin-right: auto;
-	height: 200px;
+	height: 207px;
 	width: 300px; 
 }
 
 .inpt {
-	margin-top: 20px; margin-left: 40px; margin-right: auto; 
-	height: 270px;
+	margin-top:15px; margin-left: 40px; margin-right: auto; 
+	height: 310px;
 	width: 200px;
 }
 
 .color {
 	display: block;
-	border: 1px solid #ffdfd3; /*black;*/
-	margin-top: -260px; margin-left: auto; margin-right: 20px; 
-	height: 250px;
+	border: 1px solid #ffdfd3; /*black;*/	
+	margin-top: -310px; margin-left: auto; margin-right: 20px; 
+	height: 150px;
 	width: 200px;
 }
+
+.sep {
+	display: block;
+	border: 1px solid #ffdfd3; /*black;*/
+	margin-top: 70px; margin-left: auto; margin-right: -35px; 
+	height: 23px;
+	width: 200px;
 }
 
-/*.h3 {
-	position: absolute;
- 	left: 145px;
-	top: 310px;
-	right: 450px;
-}*/
-
 .drag {
-	border:1px solid red; /*border-style: none;*/
+	border:1px solid red; 
 	float: left;
   width: 90px;
   height: 90px;
@@ -277,36 +290,13 @@ img {
 
 
 .drop{
- /* float: left;*/
   width: 100px;
   height: 90px;
   margin-top: 10px; margin-left: auto; margin-right: auto;
   padding: 25px;
-  border:1px solid black; /*border-style: none;*/
+  border: 1px solid black;
   
 }
-
-.back:hover {
-   background-color: #ddd;
-   color: black;
-}
-.next:hover {
-   background-color: rgb(121, 37, 133);
-   color: white;
-}
-.back {
-   border-radius: 50%;
-   background-color: #acacac;
-   color: black;
-}
-.next {
-   border-radius: 50%;
-   background-color: rgb(68, 30, 112);
-   color: white;
-}
-
-
-
 
 
 
