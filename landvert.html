@@ -33,6 +33,10 @@
     <option value="Good Afternoon">Good Afternoon</option>
     <option value="Good evening">Good evening</option>
     <option value="Good day!">Good day!</option>
+    <option value="Welcome">Welcome</option>
+    <option value="Hello!">Hello!</option>
+    <option value="Hey!">Hey!</option>
+    <option value="Nice to see you!">Nice to see you!</option>
   </select><br>
     </div><br>
     <div>
@@ -70,6 +74,11 @@
 
     </div>
 
+<!--     <div>
+      <label for="warna">Change font colour: </label>
+      <input type="color" name="color" id="warna" onclick="load()">
+    </div> -->
+
         <div class="color">
         <select onchange="font(this.value);">
           <option value="0">Please Select Font</option>
@@ -85,9 +94,17 @@
     <input type="color" id="colorpickerbutton" name="color"> 
 
   <select onchange="temp(this.value)" id="temp">
-    <option value="0">Please select template</option>
+    <option value="0">Select template</option>
     <option value="1">Template 1</option>
     <option value="2">Template 2</option>
+    <option value="3">Template 3</option>
+    <option value="4">Template 4</option>
+    <option value="5">Template 5</option>
+    <option value="6">Template 6</option>
+    <option value="7">Template 7</option>
+    <option value="8">Template 8</option>
+    <option value="9">Template 9</option>
+    <option value="10">Template 10</option>
   </select><br>
 
 
@@ -146,6 +163,9 @@
         }
     }
 
+    function sent() {
+          alert("You have sent to the recipient!")
+        }
 
 </script>
 
@@ -244,6 +264,51 @@ function drop1(ev) {
             recipient1.innerHTML = localStorage.getItem("recipient");
             sender1.innerHTML = localStorage.getItem("sender");
         }
+
+        function temp(value) {
+            var display = document.getElementById("display");
+            if(value==1) {
+              display.style.backgroundImage="url(Custom/1.jpeg)";
+            }
+
+            else if(value==2) {
+              display.style.backgroundImage="url(Custom/2.jpeg)";
+            }
+
+            else if(value==3) {
+              display.style.backgroundImage="url(Custom/3.jpeg)";
+            }
+
+            else if(value==4) {
+              display.style.backgroundImage="url(Custom/4.jpeg)";
+            }
+
+            else if(value==5) {
+              display.style.backgroundImage="url(Custom/5.jpeg)";
+            }
+
+            else if(value==6) {
+              display.style.backgroundImage="url(Custom/6.jpeg)";
+            }
+
+            else if(value==7) {
+              display.style.backgroundImage="url(Custom/7.jpeg)";
+            }
+
+            else if(value==8) {
+              display.style.backgroundImage="url(Custom/8.jpeg)";
+            }
+
+            else if(value==9) {
+              display.style.backgroundImage="url(Custom/9.jpeg)";
+            }
+
+            else if(value==10) {
+              display.style.backgroundImage="url(Custom/10.jpeg)";
+            }
+
+          }
+
     </script>
 
 <script>
