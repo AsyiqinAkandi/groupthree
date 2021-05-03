@@ -104,6 +104,9 @@
 			var date = document.getElementById("date");
 			var hb = document.getElementById("hb");
 			hb.innerHTML = date.value;
+			
+			// for font colour
+			document.getElementById('display').style.color = document.getElementById('color').value;
 
 			// for colour picker <- nda jadi
 		}
@@ -160,6 +163,9 @@
 
 	<label for="date">Date: </label>
 	<input type="date" name="date" id="date"><br>
+	
+	<label for="color">Change font colour: </label>
+	<input type="color" name="color" id="color"><br>
 
 	<!-- <label for="color">Background colour: </label>
 	<input type="color" name="color" id="color"><br> -->
