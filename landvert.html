@@ -14,7 +14,7 @@
     <aside>
         <h2>Customize Your Template: </h2>
         <div class="stick" class="drag" ondrop="drop(event)" ondragover="allowDrop(event)" ondrop="drop1(event)" ondragover="allowDrop1(event)">
-            <img src="inv1.png" draggable="true" ondragstart="drag1(event)" id="drag1" width="295" height="203">
+            <img src="inv1.png" draggable="true" ondragstart="drag1(event)" id="drag1" width="295" height="147">
         </div>
 
         <div class="inpt">
@@ -64,17 +64,18 @@
     </div>
 
         <div class="color">
-    <h3>Select Font Family</h3>
-    <select id="selectFontFamily" name="selectFontFamily" onchange="updatefamily();">
-    <option> Serif </option>
-    <option> Arial </option>
-    <option> Sans-Serif </option>                                  
-    <option> Tahoma </option>
-    <option> Verdana </option>
-    <option> Lucida Sans Unicode </option>                               
+   <!--  <h3>Select Font Family</h3> -->
+    <select onchange="font(this.value);">
+    <option value="0">Please Select Font</option>
+    <option value="1" style="font-family: Serif; "> Serif </option>
+    <option value="2" style="font-family: Courier New;"> Courier New </option>
+    <option value="3" style="font-family: Sans-Serif ;"> Sans-Serif </option>                                  
+    <option value="4" style="font-family: Tahoma ;"> Tahoma </option>
+    <option value="5" style="font-family: Verdana ;"> Verdana </option>
+    <option value="6" style="font-family: Lucida Sans Unicode ;"> Lucida Sans Unicode </option>                               
   </select>
 
-    <h3>Select Background Colour</h3>
+    <!-- <h3>Select Background Colour</h3> -->
     <input type="button" id="fullscreenbutton" onclick="fcolor()"> 
     <input type="color" id="colorpickerbutton" name="color"> 
 
@@ -99,14 +100,14 @@
         <!-- <div id="land" class="drop" ondrop="drop(event)" ondragover="allowDrop(event)"></div> -->
         <div id="vert" class="drop" ondrop="drop(event)" ondragover="allowDrop(event)">
 
-        <div id="greetings1" contenteditable="">Greetings</div>
-        <div id="occasion1" contenteditable="">Occasion</div>
-        <div id="date1" contenteditable="">Date</div>
-        <div id="time1" contenteditable="">Time</div>
-        <div id="venue1" contenteditable="">Venue</div>
-        <div id="details1" contenteditable="">Details</div>
-        <div id="recipient1" contenteditable="">Recipient</div>
-        <div id="sender1" contenteditable="">Sender</div>
+        <br><div id="greetings1" contenteditable="">Greetings</div>
+        <br><div id="occasion1" contenteditable="">Occasion</div>
+        <br><div id="date1" contenteditable="">Date</div>
+        <br><div id="time1" contenteditable="">Time</div>
+        <br><div id="venue1" contenteditable="">Venue</div>
+        <br><div id="details1" contenteditable="">Details</div>
+        <br><div id="recipient1" contenteditable="">Recipient</div>
+        <br><div id="sender1" contenteditable="">Sender</div>
    
         </div>
         </div>
@@ -114,7 +115,7 @@
     </main>
 </div>
 
-<input type="button" name="" id="btn" onclick="vert()" value="Select">
+<input type="button" name="" id="btn" onclick="vert()" value="Click Me!">
 <input type="button" name="" id="btn1" onclick="reset()" value="Delete">
 
 
@@ -247,28 +248,67 @@ function drop1(ev) {
 <!-- font family -->
 
 <script>
-  function updatefamily() {
-        var selector = document.getElementById('selectFontFamily');
-        var family = selector.options[selector.selectedIndex].value;
-        var input = document.getElementById('live')
-        input.style.fontFamily = family;
+  function font(value) {
+    var edit = document.getElementById("edit");
         if (value==1){
-        var.style.fontFamily = "Serif"        
+               document.getElementById("greetings1").style.fontFamily = "Serif";
+               document.getElementById("occasion1").style.fontFamily = "Serif";
+               document.getElementById("date1").style.fontFamily = "Serif";
+               document.getElementById("time1").style.fontFamily = "Serif";
+               document.getElementById("venue1").style.fontFamily = "Serif";
+               document.getElementById("details1").style.fontFamily = "Serif";
+               document.getElementById("recipient1").style.fontFamily = "Serif";
+               document.getElementById("sender1").style.fontFamily = "Serif";
       }
       else if (value==2) {
-        var.style.fontFamily = "Arial"
+            document.getElementById("greetings1").style.fontFamily = "Courier New";
+               document.getElementById("occasion1").style.fontFamily = "Courier New";
+               document.getElementById("date1").style.fontFamily = "Courier New";
+               document.getElementById("time1").style.fontFamily = "Courier New";
+               document.getElementById("venue1").style.fontFamily = "Courier New";
+               document.getElementById("details1").style.fontFamily = "Courier New";
+               document.getElementById("recipient1").style.fontFamily = "Courier New";
+               document.getElementById("sender1").style.fontFamily = "Courier New";
       }
       else if (value==3) {
-        var.style.fontFamily = "Sans-Serif"
+        document.getElementById("greetings1").style.fontFamily = "Sans-Serif";
+               document.getElementById("occasion1").style.fontFamily = "Sans-Serif";
+               document.getElementById("date1").style.fontFamily = "Sans-Serif";
+               document.getElementById("time1").style.fontFamily = "Sans-Serif";
+               document.getElementById("venue1").style.fontFamily = "Sans-Serif";
+               document.getElementById("details1").style.fontFamily = "Sans-Serif";
+               document.getElementById("recipient1").style.fontFamily = "Sans-Serif";
+               document.getElementById("sender1").style.fontFamily = "Sans-Serif";
       }
       else if (value==4) {
-        var.style.fontFamily = "Tahoma"
+        document.getElementById("greetings1").style.fontFamily = "Tahoma";
+               document.getElementById("occasion1").style.fontFamily = "Tahoma";
+               document.getElementById("date1").style.fontFamily = "Tahoma";
+               document.getElementById("time1").style.fontFamily = "Tahoma";
+               document.getElementById("venue1").style.fontFamily = "Tahoma";
+               document.getElementById("details1").style.fontFamily = "Tahoma";
+               document.getElementById("recipient1").style.fontFamily = "Tahoma";
+               document.getElementById("sender1").style.fontFamily = "Tahoma";
       }
       else if (value==5) {
-        var.style.fontFamily = "Verdana"
+        document.getElementById("greetings1").style.fontFamily = "Verdana";
+               document.getElementById("occasion1").style.fontFamily = "Verdana";
+               document.getElementById("date1").style.fontFamily = "Verdana";
+               document.getElementById("time1").style.fontFamily = "Verdana";
+               document.getElementById("venue1").style.fontFamily = "Verdana";
+               document.getElementById("details1").style.fontFamily = "Verdana";
+               document.getElementById("recipient1").style.fontFamily = "Verdana";
+               document.getElementById("sender1").style.fontFamily = "Verdana";
       }
       else if (value==6) {
-        var.style.fontFamily = "Lucida Sans Unicode"
+        document.getElementById("greetings1").style.fontFamily = "Lucida Sans Unicode";
+               document.getElementById("occasion1").style.fontFamily = "Lucida Sans Unicode";
+               document.getElementById("date1").style.fontFamily = "Lucida Sans Unicode";
+               document.getElementById("time1").style.fontFamily = "Lucida Sans Unicode";
+               document.getElementById("venue1").style.fontFamily = "Lucida Sans Unicode";
+               document.getElementById("details1").style.fontFamily = "Lucida Sans Unicode";
+               document.getElementById("recipient1").style.fontFamily = "Lucida Sans Unicode";
+               document.getElementById("sender1").style.fontFamily = "Lucida Sans Unicode";
       }
 </script>
 
