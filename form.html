@@ -167,6 +167,10 @@
 			}
         }
 
+		function sent() {
+			alert("You have sent to the recipient!")
+		}
+
 	</script>
 
 </head>
@@ -216,7 +220,10 @@
 	</select><br>
 
 	<button id="insert" class="button" onclick="insert()">Insert</button>
-	<a href="index.html" class="button">Back</a>
+	<a href="index.html" class="button">Back</a><br>
+
+	<input type="email" name="email">
+	<button id="btn" onclick="sent()">send card</button>
 
 </div>
 
