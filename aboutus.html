@@ -12,6 +12,37 @@
 			align-items: center;
 			justify-content: center;
 		}
+		
+		/*nav bar*/
+		header {
+			width: 100%; height: 15vh;
+			display: block;
+			background-color: #624a59;
+			position:  sticky;
+			top: 0;
+			z-index: 4;
+		}
+
+		header a {
+			float: right;
+			text-decoration: none; 
+			font-size: 1.2em;
+			color: white;
+			margin-top: 20px;
+			margin-right: 20px;
+			padding: 10px;
+		}
+
+		header a:hover {
+			color: #e2ae6c;
+		}
+
+		header img {
+			max-width: 80px;
+			margin-top: 3px;
+			margin-left: 30px;
+			float: left;
+		}
 
 		#bg {
 			background: url(BG.jpeg);
@@ -70,6 +101,16 @@
 </head>
 <body>
 <div id="bg">
+	
+	<header>
+		<div>
+			<img src="L1.png">
+			<a href="index.html">HOME</a>
+			<a href="">SERVICES</a> 
+			<a href="aboutus.html">ABOUT US</a>
+		</div>
+	</header>
+	
 	<div id="container">
 		<h1>About us</h1>
 		<div id="text">
