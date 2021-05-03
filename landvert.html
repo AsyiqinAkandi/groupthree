@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
-	<link rel="stylesheet" type="text/css" href="landvert.css">
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title> Customize Your Own!</title>
+    <link rel="stylesheet" type="text/css" href="landvert.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
 </head>
 <body>
@@ -11,51 +11,61 @@
 
 
 <div class="rows">
-	<aside>
-		<h2>Customize Your Template: </h2>
-		<div class="stick" class="drag" ondrop="drop(event)" ondragover="allowDrop(event)" ondrop="drop1(event)" ondragover="allowDrop1(event)">
-			<img src="file:///C:/Users/Acer%20Aspire%205/Desktop/BWEP/assg/inv.png" draggable="true" ondragstart="drag1(event)" id="drag1" width="295" height="196">
-		</div>
+    <aside>
+        <h2>Customize Your Template: </h2>
+        <div class="stick" class="drag" ondrop="drop(event)" ondragover="allowDrop(event)" ondrop="drop1(event)" ondragover="allowDrop1(event)">
+            <img src="inv1.png" draggable="true" ondragstart="drag1(event)" id="drag1" width="295" height="203">
+        </div>
 
-		<!-- <h2>Input Greetings</h2> -->
-		<div class="inpt">
-	<div>
-        <input type="greetings" name="greetings" id="greetings" placeholder="Input Greetings">
+        <div class="inpt">
+    <div>
+         <select id="greetings" onchange="selecting()">
+    <option value="Please select a greeting">Please select a greeting</option>
+    <option value="Assalamualaikum">Assalamualaikum</option>
+    <option value="Good morning">Good morning</option>
+    <option value="Good Afternoon">Good Afternoon</option>
+    <option value="Good evening">Good evening</option>
+    <option value="Good day!">Good day!</option>
+  </select><br>
     </div><br>
     <div>
-        <!-- <h2>Input Occasion</h2> -->
+        
         <input type="occasion" name="occasion" id="occasion" placeholder="Input Occasion">
     </div><br>
 
     <div>
-        <!-- <h2>Input Date</h2> -->
+        
         <input type="date" name="date" id="date" placeholder="Input Date">
     </div><br>
 
     <div>
-    	<input type="time" id="time" name="time" placeholder="Input Time">
-       <!-- min="08:00" max="8:00" required> -->
+        <input type="time" id="time" name="time" placeholder="Input Time">
+       
     </div><br>
 
     <div>   
-        <!-- h2>Input Venue</h2> -->
+        
         <input type="venue" name="venue" id="venue" placeholder="Input Venue">
     </div><br>
 
     <div>
-        <!-- <h2>Input Details</h2> -->
-        <input type="details" name="details" id="detail" placeholder="Input Details">
-		</div><br>
+        
+        <input type="details" name="details" id="details" placeholder="Input Details">
+        </div><br>
 
-		<button onclick="save()">Save</button>
-		<button id="load" onclick="fillin()">Load</button>
+    <div>
+        <input type="recipient" name="recipient" id="recipient" placeholder="Enter Recipient's Email">
+        </div><br>
 
-	</div>
+    <div>
+        <input type="sender" name="sender" id="sender" placeholder="Enter Sender's Email">
+        </div><br>
 
-		<div class="color">
-	<!-- <p id="demo">This is a paragraph.</p> -->
-	<h3>Select Font Family</h3>
-	<select id="selectFontFamily" name="selectFontFamily" onchange="updatefamily();">
+    </div>
+
+        <div class="color">
+    <h3>Select Font Family</h3>
+    <select id="selectFontFamily" name="selectFontFamily" onchange="updatefamily();">
     <option> Serif </option>
     <option> Arial </option>
     <option> Sans-Serif </option>                                  
@@ -64,27 +74,30 @@
     <option> Lucida Sans Unicode </option>                               
   </select>
 
-	<h3 class="h3">Select Background Colour</h3>
-	<input type="button" id="fullscreenbutton" onclick="fcolor()"> <!-- Button -->
-	<input type="color" id="colorpickerbutton" name="color"> <!-- Select Background Colour -->
-	<!-- <div id="overlay" ></div>Result -->
+    <h3>Select Background Colour</h3>
+    <input type="button" id="fullscreenbutton" onclick="fcolor()"> 
+    <input type="color" id="colorpickerbutton" name="color"> 
 
-	<!-- <h3 id="h3lagi">Select any template</h3> -->
-        <!-- <input type="details" name="details" id="details" placeholder="Input Details"> -->
-       <!--  <select onchange="changer(this.value)" id="details">
-            <option value="0">Select</option>
-            <option value="1">Template 1</option>
-            <option value="2">Template 2</option>
-            <option value="3">Template 3</option>
-        </select> -->
+  <select onchange="temp(this.value)" id="temp">
+    <option value="0">Please select template</option>
+    <option value="1">Template 1</option>
+    <option value="2">Template 2</option>
+  </select><br>
 
-		</div>
 
-	</aside>
+        </div>
 
-	<main>
-		<!-- <div id="land" class="drop" ondrop="drop(event)" ondragover="allowDrop(event)"></div> -->
-		<div id="vert" class="drop" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <div class="sep">
+        <button onclick="save()">Save</button>
+        <button id="load" onclick="fillin()">Load</button>
+        </div>
+
+
+    </aside>
+
+    <main>
+        <!-- <div id="land" class="drop" ondrop="drop(event)" ondragover="allowDrop(event)"></div> -->
+        <div id="vert" class="drop" ondrop="drop(event)" ondragover="allowDrop(event)">
 
         <div id="greetings1" contenteditable="">Greetings</div>
         <div id="occasion1" contenteditable="">Occasion</div>
@@ -92,11 +105,13 @@
         <div id="time1" contenteditable="">Time</div>
         <div id="venue1" contenteditable="">Venue</div>
         <div id="details1" contenteditable="">Details</div>
-        
-    </div>
-		</div>
+        <div id="recipient1" contenteditable="">Recipient</div>
+        <div id="sender1" contenteditable="">Sender</div>
+   
+        </div>
+        </div>
 
-	</main>
+    </main>
 </div>
 
 <input type="button" name="" id="btn" onclick="vert()" value="Select">
@@ -104,30 +119,25 @@
 
 
 <script type="text/javascript">
-	function vert () {
-		var x = document.getElementById("vert");
-		// var y = document.getElementById("vert");
-		if (x.style.display === "block") {
-			// x.style.display = "none";
-			// y.style.display = "block";
-		}else{
-			x.style.display = "block";
-			// y.style.display = "none";
-		}
-	}
+    function vert () {
+        var x = document.getElementById("vert");
+        if (x.style.display === "block") {  
+        }
+        else{
+            x.style.display = "block";
+        }
+    }
 
-	function reset () {
-		var z = document.getElementById("vert");
-		// var w = document.getElementById("vert");
-		var a = confirm("Are you sure?");
-		if (a == true) {
-			window.location.reload();
+    function reset () {
+        var z = document.getElementById("vert");
+        var a = confirm("Are you sure?");
+        if (a == true) {
+            window.location.reload();
 
-		}else{
-			z.style.display = "none";
-			// w.style.display = "none";
-		}
-	}
+        }else{
+            z.style.display = "none";
+        }
+    }
 
 
 </script>
@@ -168,13 +178,15 @@ function drop1(ev) {
 <!-- local storage input-->
 
 <script type="text/javascript">
-	  function save(){
+      function save(){
             var greetings = document.getElementById("greetings");
             var occasion = document.getElementById("occasion");
             var date = document.getElementById("date");
-            var time= document.getElementById("time");
+            var time = document.getElementById("time");
             var venue = document.getElementById("venue");
             var details = document.getElementById("details");
+            var recipient = document.getElementById("recipient");
+            var sender = document.getElementById("sender");
 
             localStorage.setItem("greetings", greetings.value);
             localStorage.setItem("occasion", occasion.value);
@@ -182,16 +194,21 @@ function drop1(ev) {
             localStorage.setItem("time", time.value);
             localStorage.setItem("venue", venue.value);
             localStorage.setItem("details", details.value);
+            localStorage.setItem("recipient", recipient.value);
+            localStorage.setItem("sender", sender.value);
+        }
 </script>
 
-	<script type="text/javascript">
-		  function load(){
+    <script type="text/javascript">
+          function load(){
             var greetings = document.getElementById("greetings");
             var occasion = document.getElementById("occasion");
             var date = document.getElementById("date");
             var time = document.getElementById("time");
             var venue = document.getElementById("venue");
             var details = document.getElementById("details");
+             var recipient = document.getElementById("recipient");
+              var sender = document.getElementById("sender");
 
 
             greetings.value = localStorage.getItem("greetings");
@@ -200,16 +217,21 @@ function drop1(ev) {
             time.value = localStorage.getItem("time");
             venue.value = localStorage.getItem("venue");
             details.value = localStorage.getItem("details");
-	</script>
+            recipient.value = localStorage.getItem("recipient");
+            sender.value = localStorage.getItem("sender");
+        }
+    </script>
 
-	<script type="text/javascript">
-		function fillin(){
+    <script type="text/javascript">
+        function fillin(){
             var greetings = document.getElementById("greetings1");
             var occasion = document.getElementById("occasion1");
             var date = document.getElementById("date1");
             var time = document.getElementById("time1");
             var venue = document.getElementById("venue1");
             var details = document.getElementById("details1");
+            var recipient = document.getElementById("recipient1");
+            var sender = document.getElementById("sender1");
 
             greetings1.innerHTML = localStorage.getItem("greetings");
             occasion1.innerHTML = localStorage.getItem("occasion");
@@ -217,8 +239,10 @@ function drop1(ev) {
             time1.innerHTML = localStorage.getItem("time");
             venue1.innerHTML = localStorage.getItem("venue");
             details1.innerHTML = localStorage.getItem("details");
+            recipient1.innerHTML = localStorage.getItem("recipient");
+            sender1.innerHTML = localStorage.getItem("sender");
         }
-	</script>
+    </script>
 
 <!-- font family -->
 
@@ -226,8 +250,25 @@ function drop1(ev) {
   function updatefamily() {
         var selector = document.getElementById('selectFontFamily');
         var family = selector.options[selector.selectedIndex].value;
-        var h1 = document.getElementById('live')
-        h1.style.fontFamily = family;        
+        var input = document.getElementById('live')
+        input.style.fontFamily = family;
+        if (value==1){
+        var.style.fontFamily = "Serif"        
+      }
+      else if (value==2) {
+        var.style.fontFamily = "Arial"
+      }
+      else if (value==3) {
+        var.style.fontFamily = "Sans-Serif"
+      }
+      else if (value==4) {
+        var.style.fontFamily = "Tahoma"
+      }
+      else if (value==5) {
+        var.style.fontFamily = "Verdana"
+      }
+      else if (value==6) {
+        var.style.fontFamily = "Lucida Sans Unicode"
       }
 </script>
 
@@ -244,33 +285,18 @@ function drop1(ev) {
 <!-- choose template -->
 
 <script type="text/javascript">
-	 function changer(value){
-        
-        var canvas = document.getElementById("vert")
-        if (value==1) {
-            canvas.style.backgroundImage="url(background/cs1.jpg)"
-        }
-        else if(value==2){
-            canvas.style.backgroundImage="url(background/cs2.jpg)"
-        }
-        else if(value==3){
-            canvas.style.backgroundImage="url(background/cs3.jpg)"
-        }
+  function temp(value) {
+      var display = document.getElementById("display");
+      if(value==1) {
+        display.style.backgroundImage="url(Formal/1-1.jpeg)";
+      }
+
+      else if(value==2) {
+        display.style.backgroundImage="url(Formal/2-2.jpeg)";
+      }
+
     }
-
 </script>
 
-
-<!-- greetings -->
-
-<script type="text/javascript">
-greetings1.addEventListener("click", letter => {document.getElementById("greet_result").innerHTML = "Bismillahirahmanirrahim, Assalamualaikum"})
-greetings2.addEventListener("click", letter => {document.getElementById("greet_result").innerHTML = "Hello"})
-greetings3.addEventListener("click", letter => {document.getElementById("greet_result").innerHTML = "Good Morning!"})
-greetings4.addEventListener("click", letter => {document.getElementById("greet_result").innerHTML = "How are you?"})
-</script>
-
-
-<!-- <footer>© Copyright 2021</footer> -->
 </body>
 </html>
