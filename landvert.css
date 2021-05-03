@@ -265,7 +265,7 @@ img {
 
 .color {
 	display: block;
-	border: 1px solid #ffdfd3; /*black;*/	
+	border: 1px solid #ffdfd3;
 	margin-top: -310px; margin-left: auto; margin-right: 20px; 
 	height: 150px;
 	width: 200px;
@@ -273,7 +273,7 @@ img {
 
 .sep {
 	display: block;
-	border: 1px solid #ffdfd3; /*black;*/
+	border: 1px solid #ffdfd3;
 	margin-top: 90px; margin-left: auto; margin-right: -35px; 
 	height: 23px;
 	width: 200px;
@@ -297,16 +297,12 @@ img {
   
 }
 
-
-
-/*responsive*/
-
 @media  screen and (max-width: 600px) {
 	body{flex-direction: column;}
 }
 
 @media only screen and (max-width:500px) {
-  /* For mobile phones: */
+
   .rows, #land, #vert {
     width: 100%;
   }
