@@ -12,15 +12,9 @@
 			background-size: 100%;
 		}
 
-		/*for all elements*/
 		* {
 			font-family: arial;
 		}
-
-		/*just to see where things go*/
-		/*div {
-			border: 1px solid;
-		}*/
 
 		label {
 		    font-weight: bolder;
@@ -70,55 +64,85 @@
 			width: 130px;
 		}
 
+		#greet, #kepada, #dari, #masa, #tempat, #hb {
+			position: relative;
+			display: flex;
+  			justify-content: center;
+		}
+
+		#greet {
+			font-size: 50px;
+			top: 50px;
+		}
+
+		#kepada, #dari {
+			font-size: 16px;
+			font-style: italic;
+		}
+
+		#kepada {
+			top: 150px;
+		}
+
+		#dari {
+			top: 160px;
+		}
+
+		#masa, #hb {
+			font-size: 14px;
+			font-weight: bolder;
+		}
+
+		#masa {
+			top: 190px;
+		}
+
+		#hb {
+			top: 200px;
+		}
+
+		#tempat {
+			font-size: 16px;
+			font-style: italic;
+			font-weight: bold;
+			top: 300px;
+		}
+
 	</style>
 
 	<script type="text/javascript">
 
 		function insert() {
-			// for name <- nda guna
-// 			var name = document.getElementById("name");
-// 			var nama = document.getElementById("nama");
-// 			nama.innerHTML = name.value;
-
-			// for to
 			var to = document.getElementById("to");
 			var kepada = document.getElementById("kepada");
 			kepada.innerHTML = to.value;
 
-			// for from
 			var from = document.getElementById("from");
 			var dari = document.getElementById("dari");
 			dari.innerHTML = from.value;
 
-			// for time <- balum dapat
 			var time = document.getElementById("time");
 			var masa = document.getElementById("masa");
 			masa.innerHTML = time.value;
-			
-			// for location
+
 			var place = document.getElementById("place");
 			var tempat = document.getElementById("tempat");
 			tempat.innerHTML = place.value;
 
-			// for date
 			var date = document.getElementById("date");
 			var hb = document.getElementById("hb");
 			hb.innerHTML = date.value;
-			
-			// for font colour
-			document.getElementById('display').style.color = document.getElementById('color').value;
 
-			// for colour picker <- nda jadi
+			document.getElementById('display').style.color = document.getElementById('color').value;
 		}
 
 		function selecting() {
-			// for greeting
 			var greetMe = document.getElementById("greeting").value;
 			document.getElementById("greet").innerHTML = greetMe;
 		}
 
 		function temp(value) {
-			// for template
+
 			var display = document.getElementById("display");
 			if(value==1) {
 				display.style.backgroundImage="url(Corporate/1-1.jpeg)";
@@ -136,8 +160,6 @@
 <body>
 
 <div style="grid-area: top" id="done">
-<!-- 	<label for="name">Name: </label>
-	<input type="text" name="name" id="name"><br> -->
 
 	<label>Greeting: </label>
 	<select id="greeting" onchange="selecting()">
@@ -167,9 +189,6 @@
 	<label for="color">Change font colour: </label>
 	<input type="color" name="color" id="color"><br>
 
-	<!-- <label for="color">Background colour: </label>
-	<input type="color" name="color" id="color"><br> -->
-
 	<label for="temp">Change Template: </label>
 	<select onchange="temp(this.value)" id="temp">
 		<option value="0">Please select template</option>
@@ -185,14 +204,12 @@
 <div style="grid-area: bottom" id="dtwo">
 
 	<div id="display">
-		<div id="nama"></div>
-		<div id="greet"></div>
-		<div id="kepada"></div>
-		<div id="dari"></div>
-		<div id="masa"></div>
-		<div id="tempat"></div>
-		<div id="hb"></div>
-		<div id="warna"></div>
+		<div id="greet"></div><br>
+		<div id="kepada"></div><br>
+		<div id="dari"></div><br>
+		<div id="masa"></div><br>
+		<div id="tempat"></div><br>
+		<div id="hb"></div><br>
 	</div>
 
 </div>
