@@ -75,10 +75,10 @@
 	<script type="text/javascript">
 
 		function insert() {
-			// for name
-			var name = document.getElementById("name");
-			var nama = document.getElementById("nama");
-			nama.innerHTML = name.value;
+			// for name <- unnecesary
+// 			var name = document.getElementById("name");
+// 			var nama = document.getElementById("nama");
+// 			nama.innerHTML = name.value;
 
 			// for to
 			var to = document.getElementById("to");
@@ -133,8 +133,8 @@
 <body>
 
 <div style="grid-area: top" id="done">
-	<label for="name">Name: </label>
-	<input type="text" name="name" id="name"><br>
+<!-- 	<label for="name">Name: </label>
+	<input type="text" name="name" id="name"><br> -->
 
 	<label>Greeting: </label>
 	<select id="greeting" onchange="selecting()">
