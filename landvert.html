@@ -64,18 +64,16 @@
     </div>
 
         <div class="color">
-   <!--  <h3>Select Font Family</h3> -->
-    <select onchange="font(this.value);">
-    <option value="0">Please Select Font</option>
-    <option value="1" style="font-family: Serif; "> Serif </option>
-    <option value="2" style="font-family: Courier New;"> Courier New </option>
-    <option value="3" style="font-family: Sans-Serif ;"> Sans-Serif </option>                                  
-    <option value="4" style="font-family: Tahoma ;"> Tahoma </option>
-    <option value="5" style="font-family: Verdana ;"> Verdana </option>
-    <option value="6" style="font-family: Lucida Sans Unicode ;"> Lucida Sans Unicode </option>                               
-  </select>
+        <select onchange="font(this.value);">
+          <option value="0">Please Select Font</option>
+          <option value="1" style="font-family: Serif; "> Serif </option>
+          <option value="2" style="font-family: Courier New;"> Courier New </option>
+          <option value="3" style="font-family: Sans-Serif ;"> Sans-Serif </option>                                  
+          <option value="4" style="font-family: Tahoma ;"> Tahoma </option>
+          <option value="5" style="font-family: Verdana ;"> Verdana </option>
+          <option value="6" style="font-family: Lucida Sans Unicode ;"> Lucida Sans Unicode </option>                               
+        </select>
 
-    <!-- <h3>Select Background Colour</h3> -->
     <input type="button" id="fullscreenbutton" onclick="fcolor()"> 
     <input type="color" id="colorpickerbutton" name="color"> 
 
@@ -97,7 +95,7 @@
     </aside>
 
     <main>
-        <!-- <div id="land" class="drop" ondrop="drop(event)" ondragover="allowDrop(event)"></div> -->
+
         <div id="vert" class="drop" ondrop="drop(event)" ondragover="allowDrop(event)">
 
         <br><div id="greetings1" contenteditable="">Greetings</div>
@@ -143,8 +141,6 @@
 
 </script>
 
-<!-- drag drop -->
-
 <script>
 function allowDrop(ev) {
   ev.preventDefault();
@@ -174,9 +170,6 @@ function drop1(ev) {
   ev.target.appendChild(document.getElementById(data));
 }
 </script>
-
-
-<!-- local storage input-->
 
 <script type="text/javascript">
       function save(){
@@ -245,8 +238,6 @@ function drop1(ev) {
         }
     </script>
 
-<!-- font family -->
-
 <script>
   function font(value) {
     var edit = document.getElementById("edit");
@@ -312,17 +303,12 @@ function drop1(ev) {
       }
 </script>
 
-
-<!-- color picker -->
-
 <script type="text/javascript">
   function fcolor () {
     var color = document.getElementById("colorpickerbutton").value;
     document.getElementById("vert").style.backgroundColor = color;
 }
 </script>
-
-<!-- choose template -->
 
 <script type="text/javascript">
   function temp(value) {
