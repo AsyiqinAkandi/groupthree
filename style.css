@@ -1,3 +1,33 @@
+/*nav bar*/
+header {
+	width: 100%; height: 12vh;
+	display: block;
+	background-color: #624a59;
+	position:  sticky;
+	top: 0;
+	z-index: 4;
+}
+
+header a {
+	float: right;
+	text-decoration: none; 
+	font-size: 1.2em;
+	color: white;
+	margin-top: 20px;
+	margin-right: 20px;
+	padding: 10px;
+}
+
+header a:hover {
+	color: #e2ae6c;
+}
+
+header img {
+	max-width: 80px;
+	margin-left: 30px;
+	float: left;
+}
+
 /*the body*/
 #container {
 	width: 100%;
@@ -176,9 +206,10 @@ h1 {
 footer {
 	position: fixed;
 	bottom: 0;
-	background-color: beige;
+	background-color: #624a59;
 	width: 100%;
 	text-align: center;
+	color: white;
 }
 
 /*mobile view*/
